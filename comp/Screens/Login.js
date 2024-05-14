@@ -13,6 +13,7 @@ const Login = ({ navigation }) => {
   const hasErrorPassword = () => password.length < 6;
   const hasErrorEmail = () => !email.includes("@");
   useEffect(() => {
+    
     if (userLogin) {
       navigation.navigate("Home");
     }
@@ -26,7 +27,11 @@ const Login = ({ navigation }) => {
     navigation.navigate('Register');
   };
   return (
-    <View style={{ flex: 1, backgroundColor:"#808080", justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1, backgroundColor:"orange", justifyContent: "center", alignItems: "center" }}>
+
+
+
+    
       <Text style={{ fontSize: 40, fontWeight: "bold", color: COLORS.pink, marginBottom: 30 }}>
         Login
       </Text>
@@ -37,7 +42,7 @@ const Login = ({ navigation }) => {
         style={{ marginVertical: 10 , width:390}}
         mode="outlined"
       />
-      <HelperText type='error' visible={hasErrorEmail()}>Vui lòng nhập Email.</HelperText>
+      <HelperText style={{color:'white'}} type='error' visible={hasErrorEmail()}>Vui lòng nhập Email.</HelperText>
       <TextInput
         placeholder="Password"
         value={password}
@@ -47,7 +52,7 @@ const Login = ({ navigation }) => {
         right={ <TextInput.Icon  icon="eye" onPress={() => setShowPassword(!showPassword)} />}
         mode="outlined"
       />
-     <HelperText type='error' visible={hasErrorPassword()}>Vui lòng nhập mật khẩu có đủ 6 ký tư.</HelperText>
+     <HelperText style={{color:'white'}} type='error' visible={hasErrorPassword()}>Vui lòng nhập mật khẩu có đủ 6 ký tư.</HelperText>
      <Button
         mode="contained"
         onPress={onSubmit} // Ensure this calls the onSubmit function

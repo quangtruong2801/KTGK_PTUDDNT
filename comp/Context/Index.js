@@ -52,7 +52,7 @@ const login = (dispatch, email, password) =>{
             dispatch({type:"USER_LOGIN",value});
         })
     )
-    .catch(e=> alert("Sai user va password"))
+    .catch(e=>console.log(e.message('sai pass roi thang ngu')))
 }
 
 const logout = (dispatch,navigation) => {

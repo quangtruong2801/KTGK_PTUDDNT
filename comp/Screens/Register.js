@@ -30,7 +30,7 @@ const Register = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1,backgroundColor:'#808080', justifyContent: "center", alignItems: "center" }}>
+    <View style={{ flex: 1,backgroundColor:'orange', justifyContent: "center", alignItems: "center" }}>
       <Text style={{ fontSize: 40, fontWeight: "bold", color: COLORS.pink, marginBottom: 30 }}>
         Register
       </Text>
@@ -41,7 +41,7 @@ const Register = ({ navigation }) => {
         style={{ marginVertical: 10 , width:390}}
         mode="outlined"
       />
-      <HelperText type='error' visible={hasErrorEmail()}>Vui lòng nhập kiểm tra Email.</HelperText>
+      <HelperText style={{color:'white'}} type='error' visible={hasErrorEmail()}>Vui lòng nhập kiểm tra Email.</HelperText>
       <TextInput
         placeholder="Full Name"
         value={fullName}
@@ -49,7 +49,7 @@ const Register = ({ navigation }) => {
         style={{ marginVertical: 10 , width:390}}
         mode="outlined"
       />
-      <HelperText type='error' visible={hasErrorFullname()}>Vui lòng nhập tên người dùng.</HelperText>
+      <HelperText style={{color:'white'}} type='error' visible={hasErrorFullname()}>Vui lòng nhập tên người dùng.</HelperText>
       <TextInput
         placeholder="Password"
         value={password}
@@ -58,7 +58,7 @@ const Register = ({ navigation }) => {
         style={{ marginVertical: 10 , width:390}}
         mode="outlined"
       />
-      <HelperText type='error' visible={hasErrorPassword()}>Vui lòng nhập mật khẩu có đủ 6 ký tư.</HelperText>
+      <HelperText style={{color:'white'}} type='error' visible={hasErrorPassword()}>Vui lòng nhập mật khẩu có đủ 6 ký tư.</HelperText>
       <TextInput
         placeholder="Confirm Password"
         value={confirmPassword}
@@ -67,7 +67,7 @@ const Register = ({ navigation }) => {
         style={{ marginVertical: 10 , width:390}}
         mode="outlined"
       />
-    <HelperText type='error' visible={hasErrorPasswordConfirm()}>Vui lòng nhập lại mật khẩu.</HelperText>
+    <HelperText style={{color:'white'}} type='error' visible={hasErrorPasswordConfirm()}>Vui lòng nhập lại mật khẩu.</HelperText>
         <Button
           mode="contained"
           onPress={onSubmit} 
